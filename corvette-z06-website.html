@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corvette Z06 - Ultimate Performance</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #000;
+            color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .navbar-links {
+            display: flex;
+            gap: 20px;
+        }
+        .navbar-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .navbar-links a:hover {
+            color: #ffd700;
+        }
+
+        .hero {
+            background-color: #000;
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            position: relative;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #ffd700;
+            color: #000;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #ffec00;
+        }
+
+        .specs {
+            padding: 80px 20px;
+            background-color: #f4f4f4;
+        }
+        .specs-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .specs-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            width: 48%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .specs-card h2 {
+            margin-bottom: 20px;
+            color: #000;
+        }
+        .specs-list {
+            list-style-type: none;
+        }
+        .specs-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .specs-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #ffd700;
+        }
+
+        .contact {
+            padding: 80px 20px;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .footer-links {
+            margin-top: 15px;
+        }
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            .specs-container {
+                flex-direction: column;
+            }
+            .specs-card {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-logo">Corvette Z06</div>
+        <div class="navbar-links">
+            <a href="#overview">Overview</a>
+            <a href="#specs">Specs</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Corvette Z06</h1>
+            <p class="hero-subtitle">Unleash the Ultimate Performance</p>
+            <a href="#specs" class="btn">Explore Specs</a>
+        </div>
+    </section>
+
+    <!-- Specifications Section -->
+    <section id="specs" class="specs">
+        <div class="specs-container">
+            <div class="specs-card">
+                <h2>Performance Specs</h2>
+                <ul class="specs-list">
+                    <li>0-60 mph: Under 3 seconds</li>
+                    <li>Top Speed: 195 mph</li>
+                    <li>Horsepower: 670 hp</li>
+                    <li>Torque: 460 lb-ft</li>
+                </ul>
+            </div>
+            <div class="specs-card">
+                <h2>Technical Details</h2>
+                <ul class="specs-list">
+                    <li>Engine: 5.5L Naturally Aspirated V8</li>
+                    <li>Transmission: 8-Speed Dual-Clutch</li>
+                    <li>Drivetrain: Rear-Wheel Drive</li>
+                    <li>Weight: 3,434 lbs</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <form class="contact-form">
+            <h2>Contact a Dealer</h2>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn">Send Inquiry</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Corvette Z06. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form validation
+        document.addEventListener('DOMContentLoaded', function() {
+            var form = document.querySelector('.contact-form');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your inquiry! We will contact you soon.');
+                form.reset();
+            });
+        });
+    </script>
+</body>
+</html>
