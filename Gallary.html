@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corvette Z06 - Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            background: #000;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #c51e3a;
+        }
+
+        .gallery-header {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: #f5f5f5;
+        }
+
+        .gallery-header h1 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            background: white;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-item-content {
+            aspect-ratio: 16/9;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .interior-image {
+            background-image: url('provided-corvette-interior.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .gallery-caption {
+            padding: 1.5rem;
+            background: white;
+            font-size: 0.9rem;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 2rem 1rem;
+            flex-wrap: wrap;
+            background: white;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            background: #f0f0f0;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .filter-btn:hover {
+            background: #c51e3a;
+            color: white;
+        }
+
+        footer {
+            background: #000;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        footer small {
+            display: block;
+            margin-top: 1rem;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+            
+            .gallery-header {
+                padding: 2rem 1rem;
+            }
+            
+            .filter-btn {
+                padding: 0.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="corvette (1).html">Home</a>
+        <a href="#">Overview</a>
+        <a href="#">Specs</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="gallery-header">
+        <h1>Corvette Z06 Gallery</h1>
+        <p>Experience the power and precision of America's ultimate supercar</p>
+    </div>
+
+    <div class="gallery-filters">
+        <button class="filter-btn">All</button>
+        <button class="filter-btn">Exterior</button>
+        <button class="filter-btn">Interior</button>
+        <button class="filter-btn">Track Action</button>
+        <button class="filter-btn">Details</button>
+    </div>
+
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <div class="gallery-item-content">
+                Front View Image Placeholder
+            </div>
+            <div class="gallery-caption">
+                Front View - Aggressive stance with aerodynamic design elements
+            </div>
+        </div>
+        
+        <div class="gallery-item">
+            <div class="gallery-item-content">
+                Side Profile Image Placeholder
+            </div>
+            <div class="gallery-caption">
+                Side Profile - Sculpted lines showcasing performance-driven design
+            </div>
+        </div>
+        
+        <div class="gallery-item">
+            <div class="gallery-item-content interior-image">
+            </div>
+            <div class="gallery-caption">
+                Driver-Focused Cockpit - Digital instrument cluster with heads-up display, premium leather interior, and carbon fiber accents
+            </div>
+        </div>
+        
+        <div class="gallery-item">
+            <div class="gallery-item-content">
+                Track Action Image Placeholder
+            </div>
+            <div class="gallery-caption">
+                Track Performance - Z06 demonstrating its racing heritage
+            </div>
+        </div>
+        
+        <div class="gallery-item">
+            <div class="gallery-item-content">
+                Engine Bay Image Placeholder
+            </div>
+            <div class="gallery-caption">
+                5.5L V8 Engine - Hand-built LT6 flat-plane crank engine
+            </div>
+        </div>
+        
+        <div class="gallery-item">
+            <div class="gallery-item-content">
+                Rear View Image Placeholder
+            </div>
+            <div class="gallery-caption">
+                Rear View - High-mounted wing and quad exhaust system
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2024 Corvette Z06. All Rights Reserved.
+        <small>Privacy Policy | Terms of Service</small>
+    </footer>
+</body>
+</html>
